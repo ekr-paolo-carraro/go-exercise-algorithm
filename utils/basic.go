@@ -6,7 +6,11 @@ import (
 )
 
 //Sort sorts a slice
-func Sort(items []string) []string {
+func Sort(items []string) {
+
+	if len(items) == 0 {
+		return
+	}
 
 	index := 1
 	outherFlagLoop := true
@@ -35,8 +39,6 @@ func Sort(items []string) []string {
 			}
 		}
 	}
-
-	return items
 }
 
 //IsSorted retrun if a slice of strings is sorted

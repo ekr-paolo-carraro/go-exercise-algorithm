@@ -3,7 +3,7 @@ package main
 import (
 	"fmt"
 
-	"github.com/ekr-paolo-carraro/algorithm/utils"
+	"github.com/ekr-paolo-carraro/go-exercise-algorithm/utils"
 )
 
 func main() {
@@ -38,9 +38,12 @@ func main() {
 		"zorro",
 	}
 
-	pos, err := utils.SearchItem("paolo", utils.Sort(names))
+	utils.Sort(names)
+	pos, err := utils.SearchItem("paolo", names)
 	if err != nil {
 		fmt.Println(err)
 	}
 	fmt.Println(pos)
+
 }
+b
