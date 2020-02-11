@@ -55,7 +55,7 @@ func IsSorted(items []string) bool {
 //return -1 in case not found or error if not sorted
 func SearchItem(itemToSearch string, items []string) (int, error) {
 	if IsSorted(items) == false {
-		return -1, errors.New("Can't search because of items are not sorted")
+		return -1, errors.New("Can't search because items are not sorted")
 	}
 	return iternalSearch(itemToSearch, items, 0, len(items)), nil
 }
